@@ -9,27 +9,27 @@
     </div>
   </div>
   <div class="row">
-    <div class="col-md-4 loginBox">
+    <div class="col-md-4 col-sm-8 col-xs-10 loginBox">
       <h2 style="margin-top: 45px;">Sign in</h2>
       <form class="login-form">
           <div class="input-group form-group" style="top: 30px;">
             <div class="input-group-prepend">
               <span class="input-group-text"><i class="glyphicon glyphicon-user"></i></span>
             </div>
-            <input type="text" class="form-control username-input" placeholder="username">
+            <input name="abc1" [(ngModel)]="email" type="text" class="form-control username-input" placeholder="username">
             
           </div>
           <div class="input-group form-group">
             <div class="input-group-prepend">
               <span class="input-group-text"><i class="glyphicon glyphicon-lock"></i></span>
             </div>
-            <input type="password" class="form-control" placeholder="password">
+            <input name="abc2" [(ngModel)]="pass" type="password" class="form-control" placeholder="password">
           </div>
           <div class="row align-items-center remember">
             <input type="checkbox">Remember Me
           </div>
           <div class="form-group">
-            <input type="submit" value="Login" class="btn float-right login_btn login-submit">
+            <input type="submit" value="Login" class="btn float-right login_btn login-submit" (click)="logIn();">
           </div>
 
           <br/>

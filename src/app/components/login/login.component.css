@@ -1,3 +1,4 @@
+@import '~@angular/material/prebuilt-themes/deeppurple-amber.css';
 .loginBox{
 	height: 400px;
 	margin: 100px auto;
@@ -38,9 +39,9 @@
 	padding-left: 15px;
 }
 .form-control{
-	margin-left: 41px;
-    width: 85%;
-    z-index: 999;
+	margin-left: 41px !important;
+    width: 90% !important;
+    z-index: 999 !important;
 }
 .header{
 	color: #fff;

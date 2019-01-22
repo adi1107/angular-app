@@ -1,0 +1,28 @@
+<div class="container-fluid mainBox">
+  
+  <app-header></app-header>
+
+  <div class="container group-body">
+    <div class="col-md-12">
+      <h2>List of all <span class="elivate">Friends</span></h2>
+    </div>
+
+    <div class="container">
+      <div class="col-md-12 topbar">
+        <input class="pull-right search-inpt" type="text" name="search" placeholder="search friend name" [(ngModel)]="searchKey" (ngModelChange)="search();">
+      </div>
+    </div>
+    
+    <div>
+      <div class="col-xl-12 col-sm-12 col-md-4 col-ls-4 contact-cards" *ngFor="let friend of currentFriends;">
+        <div class="thumbnail">
+          <div class="caption">
+            <h3 class="group-name" (click)="goToProfile(friend);">{{friend.name}}</h3>
+            <p><b>Age:</b> {{friend.age}}</p>
+          </div>
+        </div>
+      </div>
+    </div>
+    
+  </div>
+</div>

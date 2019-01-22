@@ -1,0 +1,16 @@
+<div class="row">
+  <div class="col-md-12 header">
+      <div class="head">
+        <img style="cursor: pointer;" class="logo" src="/assets/logo.svg" routerLink="/home">
+        <h3 style="cursor: pointer;" class="org" routerLink="/home">HOME</h3>
+        <a *ngIf="isAdmin" (click)="goToFriendsList();" class="head-btn2">Friends List</a>
+        <span class="pull-right">
+          <img *ngIf="user" class="userPic" src="/assets/user.png" />
+          <span *ngIf="user" class="user_name">{{user.name}}</span>
+          <a  *ngIf="isAdmin" (click)="signOut();" class="head-btn">logout</a>
+          <a  *ngIf="!isAdmin" (click)="signIn();" class="head-btn">signin</a>
+          <a  *ngIf="!isAdmin" (click)="signUp();" class="head-btn">signup</a>
+        </span>
+      </div>
+  </div>
+</div>
